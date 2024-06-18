@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converter</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='scss/converter/index.css') }}"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header_container container">
+          <a class="header_logo" href="/about">
+            <img
+              class="header_logo_img"
+              src="/static/images/header/logoHeader.png"
+            />
+          </a>
+          <div class="header_user">
+            <a class="header_user_link">Пользователь</a>
+            <img
+              class="header_user_icon"
+              src="/static/images/header/userIcon.svg"
+            />
+          </div>
+        </div>
+      </header>
+      <div id="logoutModal" class="modal">
+        <div class="modal_content">
+          <span class="close_button">&times;</span>
+          <p>Вы уверены, что хотите выйти?</p>
+          <button id="logoutButton">Выйти</button>
+        </div>
+      </div>
+      <main class="converter">
+        <div class="converter_container container">
+          <div class="converter_windows">
+            <div class="converter_windows_input">
+              <div class="windows_input_file">
+                <img
+                  class="windows_input_icon"
+                  src="/static/images/form/image.svg"
+                />
+              </div>
+              <div class="windows_input_buttons">
+                <button class="input_buttons_upload">Загрузить файл</button>
+                <button class="input_buttons_icon" disabled>
+                  <svg
+                    class="input_buttons_svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M18 9.0218V5.5H0V14.75C0 16.5449 1.45507 18 3.25 18H9.0218C8.375 16.9897 8 15.7886 8 14.5C8 10.9101 10.9101 8 14.5 8C15.7886 8 16.9897 8.375 18 9.0218ZM18 3.25C18 1.45507 16.5449 0 14.75 0H3.25C1.45507 0 0 1.45507 0 3.25V4H18V3.25Z"
+                      fill="currentColor"
+                      fill-opacity="0.8"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9 14.5C9 17.5376 11.4624 20 14.5 20C17.5376 20 20 17.5376 20 14.5C20 11.4624 17.5376 9 14.5 9C11.4624 9 9 11.4624 9 14.5ZM18 11.5C18 11.2239 17.7761 11 17.5 11C17.2239 11 17 11.2239 17 11.5V12.0506C16.3651 11.4027 15.4798 11 14.5 11C13.3323 11 12.2982 11.5724 11.6632 12.4496C11.5013 12.6733 11.5514 12.9859 11.775 13.1478C11.9987 13.3098 12.3113 13.2597 12.4733 13.036C12.9283 12.4073 13.6666 12 14.5 12C15.3174 12 16.0436 12.392 16.5003 13H15.5C15.2239 13 15 13.2239 15 13.5C15 13.7761 15.2239 14 15.5 14H17.5C17.7761 14 18 13.7761 18 13.5V11.5ZM12 17.5V16.9494C12.6349 17.5973 13.5203 18 14.5 18C15.5732 18 16.534 17.5164 17.1752 16.7569C17.3534 16.546 17.3268 16.2305 17.1158 16.0523C16.9048 15.8742 16.5893 15.9008 16.4112 16.1118C15.9518 16.6558 15.2663 17 14.5 17C13.6827 17 12.9564 16.608 12.4998 16H13.5C13.7761 16 14 15.7761 14 15.5C14 15.2239 13.7761 15 13.5 15H11.5C11.2239 15 11 15.2239 11 15.5V17.5C11 17.7761 11.2239 18 11.5 18C11.7761 18 12 17.7761 12 17.5Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+                <input
+                  type="file"
+                  id="fileInput"
+                  style="display: none"
+                  accept="image/*"
+                />
+              </div>
+            </div>
+            <div class="converter_windows_output">
+              <div class="windows_output_file">
+                <textarea class="windows_output_textarea"></textarea>
+              </div>
+              <div class="windows_output_buttons">
+                <button class="windows_output_copy" disabled>
+                  Скопировать
+                </button>
+                <button class="windows_output_download" disabled>
+                  Скачать
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="/static/js/header/index.js"></script>
+  <script src="/static/js/converter/index.js"></script>
+</html>

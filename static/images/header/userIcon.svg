@@ -1,0 +1,16 @@
+<svg width="30.000000" height="30.000000" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip48_431">
+			<rect id="user icon" rx="14.500000" width="29.000000" height="29.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g opacity="0.500000">
+		<g clip-path="url(#clip48_431)">
+			<path id="Vector" d="M19.49 16.49C20.46 16.49 21.25 17.25 21.25 18.18L21.25 18.87C21.25 19.3 21.1 19.72 20.84 20.07C19.64 21.69 17.66 22.5 14.99 22.5C12.32 22.5 10.35 21.69 9.14 20.07C8.88 19.72 8.75 19.3 8.75 18.87L8.75 18.18C8.75 17.25 9.53 16.49 10.5 16.49L19.49 16.49ZM14.99 7.5C17.15 7.5 18.9 9.17 18.9 11.25C18.9 13.32 17.15 15 14.99 15C12.83 15 11.09 13.32 11.09 11.25C11.09 9.17 12.83 7.5 14.99 7.5Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</g>
+		<rect id="user icon" rx="14.500000" width="29.000000" height="29.000000" transform="translate(0.500000 0.500000)" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	</g>
+</svg>

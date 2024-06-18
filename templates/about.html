@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='scss/about/index.css') }}"
+    />
+    <title>About</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header_container container">
+          <a class="header_logo" href="/about">
+            <img
+              class="header_logo_img"
+              src="/static/images/header/logoHeader.png"
+            />
+          </a>
+          <div class="header_user">
+            <a class="header_user_link">Пользователь</a>
+            <img
+              class="header_user_icon"
+              src="/static/images/header/userIcon.svg"
+            />
+          </div>
+        </div>
+      </header>
+      <div id="logoutModal" class="modal">
+        <div class="modal_content">
+          <span class="close_button">&times;</span>
+          <p>Вы уверены, что хотите выйти?</p>
+          <button id="logoutButton">Выйти</button>
+        </div>
+      </div>
+
+      <main class="main">
+        <div class="main_container container">
+          <article class="main_title">
+            <div class="main_title_info">
+              <h3 class="main_title_text">
+                <span class="text_blue">Code to Text</span> — Мгновенное
+                преобразование кода в текст
+              </h3>
+              <a href="/converter">
+                <button class="main_title_button">Попробовать</button>
+              </a>
+            </div>
+            <div class="main_title_image">
+              <img src="/static/images/about/titleImage.png" />
+            </div>
+          </article>
+          <article class="main_advantages">
+            <div class="main_advantages_text">
+              <h3 class="main_advantages_mainText">
+                Выбирайте <span class="text_blue">надёжность</span> и <span
+                  class="text_blue"
+                  >эффективность</span
+                >
+              </h3>
+              <p class="main_advantages_subtext">
+                Присоединяйтесь к тем, кто ценит мгновенные результаты, высокую
+                точность и абсолютную безопасность данных
+              </p>
+            </div>
+            <div class="main_advantages_cards">
+              <div class="main_advantages_card">
+                <div class="advantages_card_img">
+                  <img src="/static/images/about/cardIcon1.svg" />
+                </div>
+                <div class="advantages_card_text">
+                  <h6 class="advantages_card_title">Скорость</h6>
+                  <p class="advantages_card_subtext">
+                    Мгновенное получение результата
+                  </p>
+                </div>
+              </div>
+              <div class="main_advantages_card">
+                <div class="advantages_card_img">
+                  <img src="/static/images/about/cardIcon2.svg" />
+                </div>
+                <div class="advantages_card_text">
+                  <h6 class="advantages_card_title">Простота</h6>
+                  <p class="advantages_card_subtext">
+                    Лёгкий доступ на любом устройстве
+                  </p>
+                </div>
+              </div>
+              <div class="main_advantages_card">
+                <div class="advantages_card_img">
+                  <img src="/static/images/about/cardIcon3.svg" />
+                </div>
+                <div class="advantages_card_text">
+                  <h6 class="advantages_card_title">Безопасность</h6>
+                  <p class="advantages_card_subtext">
+                    Ваши данные остаются конфиденциальными
+                  </p>
+                </div>
+              </div>
+              <div class="main_advantages_card">
+                <div class="advantages_card_img">
+                  <img src="/static/images/about/cardIcon4.svg" />
+                </div>
+                <div class="advantages_card_text">
+                  <h6 class="advantages_card_title">Точность</h6>
+                  <p class="advantages_card_subtext">
+                    Высокая точность преобразования кода
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="main_steps">
+            <div class="steps_text">
+              <div class="steps_text_container">
+                <h3 class="steps_text_title">
+                  Всего <span class="text_blue">три шага</span> от скриншота
+                  до текста
+                </h3>
+                <p class="steps_text_subtext">
+                  Быстро, легко, удобно: ваш код в текстовом формате за секунды
+                </p>
+              </div>
+            </div>
+            <div class="steps_blocks">
+              <div class="steps_blocks_numbers">
+                <h1 class="steps_blocks_number">1</h1>
+                <h1 class="steps_blocks_number">2</h1>
+                <h1 class="steps_blocks_number">3</h1>
+              </div>
+              <div class="steps_blocks_squares">
+                <div class="steps_blocks_square square1">
+                  <img src="/static/images/about/square1.svg" />
+                  <p class="steps_blocks_text">
+                    Начните с загрузки скриншота прямо на нашем сайте. Просто
+                    выберите нужный файл изображения, и наша система мгновенно
+                    приступит к работе. Поддерживаются все популярные форматы
+                    изображений
+                  </p>
+                </div>
+                <div class="steps_blocks_wrapper">
+                  <div class="steps_blocks_square square2">
+                    <img src="/static/images/about/square2.svg" />
+                    <p class="steps_blocks_text">
+                      Наша передовая технология обеспечивает быструю и точную
+                      обработку, так что вам не придётся ждать долго
+                    </p>
+                  </div>
+                  <div class="steps_blocks_square square3">
+                    <img src="/static/images/about/square3.svg" />
+                    <p class="steps_blocks_text">
+                      Вам остаётся только нажать кнопку «Копировать»,
+                      чтобы сохранить текст в буфер обмена и использовать
+                      его как вам угодно
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="main_ready">
+            <div class="ready_wrapper">
+              <div class="ready_text">
+                <h3 class="ready_text_title">
+                  Готовы <span class="text_blue">начать</span>?
+                </h3>
+                <p class="ready_text_subtext">
+                  Нажмите на кнопку и преобразуйте свой первый скриншот в текст
+                  прямо сейчас
+                </p>
+              </div>
+              <a href="/converter"
+                ><button class="ready_button">Попробовать</button></a
+              >
+            </div>
+          </article>
+          <img class="line" src="/static/images/general/Line.svg" />
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="/static/js/header/index.js"></script>
+</html>

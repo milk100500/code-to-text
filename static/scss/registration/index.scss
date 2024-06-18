@@ -1,0 +1,236 @@
+@import "../general/index.scss";
+
+.wrapper {
+  height: 100vh;
+  background-color: $background_primary_dark;
+}
+
+input {
+  caret-color: $text_focus_blue;
+}
+
+input::placeholder {
+  color: $text_placeholder_gray;
+}
+
+.registration {
+  height: 100%;
+
+  &_container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_form {
+    box-sizing: border-box;
+    min-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 40px;
+    background-color: $background_primary_dark;
+    border-radius: 40px;
+    box-shadow: 4px 4px 40px 0px rgba(0, 71, 255, 0.1);
+    border: 2px solid;
+    border-color: $border_primary_blue;
+  }
+}
+
+.form {
+  &_logo {
+    max-width: 134px;
+    max-height: 20px;
+    color: $text_primary_gray;
+
+    &_img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  &_username,
+  &_email,
+  &_password,
+  &_password_repeat {
+    color: $text_primary_gray;
+    width: 250px;
+    font-size: map-get($font-size, S);
+    transition: color 0.2s ease;
+
+    & > &_text {
+      margin-left: 22px;
+      margin-bottom: 4px;
+    }
+
+    &:focus-within {
+      color: $text_focus_blue;
+    }
+
+    & > input {
+      color: $text_primary_white;
+      height: 41px;
+      width: 100%;
+      box-sizing: border-box;
+      border: 2px solid;
+      border-color: $border_default_gray;
+      background-color: $background_primary_dark;
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-size: map-get($font-size, M);
+      transition: border-color 0.2s ease;
+
+      &:hover {
+        border-color: $border_hover_gray;
+      }
+
+      &:focus {
+        border-color: $border_focus_blue;
+      }
+    }
+  }
+
+  &_password {
+    &_icon {
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    &_wrapper {
+      height: 41px;
+      border: 2px solid;
+      border-color: $border_default_gray;
+      padding: 0 5px 0 20px;
+      border-radius: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      transition: border-color 0.2s ease;
+
+      &:hover {
+        border-color: $border_hover_gray;
+      }
+
+      &:focus-within {
+        border-color: $border_focus_blue;
+      }
+    }
+  }
+
+  &_password,
+  &_password_repeat {
+    & input {
+      background-color: $background_primary_dark;
+      color: $text_primary_white;
+      &:focus {
+        border: none;
+      }
+      border: none;
+    }
+  }
+
+  &_checkbox {
+    display: flex;
+    width: 250px;
+    font-size: map-get($font-size, S);
+
+    &_text {
+      margin-left: 8px;
+      color: $text_primary_gray;
+    }
+  }
+
+  &_submit {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: $background_primary_blue;
+    border-radius: 100px;
+    color: $text_primary_white;
+    font-weight: bold;
+    width: 250px;
+    box-sizing: border-box;
+    text-align: center;
+
+    &[disabled] {
+      background-color: $background_disabled_gray;
+      cursor: default;
+    }
+  }
+
+  &_registration {
+    color: $text_primary_gray;
+    font-size: map-get($font-size, S);
+    text-align: center;
+
+    &_text {
+    }
+
+    &_link {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+/* Стили для обертки */
+.custom-checkbox {
+  display: block;
+  position: relative;
+  flex: 0 0 18px;
+  height: 18px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+/* Скрываем стандартный чекбокс */
+.custom-checkbox input {
+  position: absolute;
+  display: none;
+}
+
+/* Создаем кастомный чекбокс */
+.custom-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+/* Стиль для чекбокса при наведении */
+.custom-checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* Стиль для чекбокса при активации */
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Создаем галочку внутри чекбокса */
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Стиль галочки, когда чекбокс выбран */
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Стили для галочки */
+.custom-checkbox .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
